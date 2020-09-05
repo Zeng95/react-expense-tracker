@@ -1995,9 +1995,9 @@
   integrity sha1-JktExaKN+oAZj8L3ttPIoFS5SR8=
 
 "@types/node@^12.0.0":
-  version "12.12.54"
-  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-12.12.54.tgz?cache=0&sync_timestamp=1598656851627&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-12.12.54.tgz#a4b58d8df3a4677b6c08bfbc94b7ad7a7a5f82d1"
-  integrity sha1-pLWNjfOkZ3tsCL+8lLetenpfgtE=
+  version "12.12.55"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-12.12.55.tgz#0aa266441cb9e1fd3e415a8f619cb7d776667cdd"
+  integrity sha1-CqJmRBy54f0+QVqPYZy313ZmfN0=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
