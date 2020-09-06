@@ -1,5 +1,5 @@
 import { FileText, PieChart, Tag } from '@styled-icons/feather'
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -29,8 +29,8 @@ const TabbarItemStyled = styled.li`
   }
 `
 
-class TabbarItem extends Component<Props> {
-  getIcon(icon: String) {
+const TabbarItem: React.FunctionComponent<Props> = (props) => {
+  function getIcon(icon: String) {
     if (icon === 'tag') {
       return <Tag className="icon icon-tag" />
     } else if (icon === 'file-text') {
@@ -40,18 +40,16 @@ class TabbarItem extends Component<Props> {
     }
   }
 
-  render() {
-    const { icon, routePath, routeName } = this.props
+  const { icon, routePath, routeName } = props
 
-    return (
-      <TabbarItemStyled>
-        <Link to={routePath}>
-          {this.getIcon(icon)}
-          <span>{routeName}</span>
-        </Link>
-      </TabbarItemStyled>
-    )
-  }
+  return (
+    <TabbarItemStyled>
+      <Link to={routePath}>
+        {getIcon(icon)}
+        <span>{routeName}</span>
+      </Link>
+    </TabbarItemStyled>
+  )
 }
 
 export default TabbarItem

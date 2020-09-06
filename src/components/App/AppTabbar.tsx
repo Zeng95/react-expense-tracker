@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import AppTabbarItem from './AppTabbarItem'
 
@@ -10,28 +10,22 @@ const AppTabbarStyled = styled.nav`
   }
 `
 
-class AppTabbar extends Component {
-  render() {
-    return (
-      <AppTabbarStyled>
-        <ul>
-          <AppTabbarItem icon="tag" routePath="/tags" routeName="标签" />
+const AppTabbar: React.FunctionComponent = () => {
+  return (
+    <AppTabbarStyled>
+      <ul>
+        <AppTabbarItem icon="tag" routePath="/tags" routeName="标签" />
 
-          <AppTabbarItem
-            icon="file-text"
-            routePath="/details"
-            routeName="明细"
-          />
+        <AppTabbarItem icon="file-text" routePath="/details" routeName="明细" />
 
-          <AppTabbarItem
-            icon="pie-chart"
-            routePath="/statistics"
-            routeName="统计"
-          />
-        </ul>
-      </AppTabbarStyled>
-    )
-  }
+        <AppTabbarItem
+          icon="pie-chart"
+          routePath="/statistics"
+          routeName="统计"
+        />
+      </ul>
+    </AppTabbarStyled>
+  )
 }
 
 export default AppTabbar

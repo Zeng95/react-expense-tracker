@@ -3,10 +3,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
-  useLocation
+  Redirect
 } from 'react-router-dom'
-import AppLayout from 'components/App/AppLayout'
+import Tags from 'views/Tags'
+import Details from 'views/Details'
+import Statistics from 'views/Statistics'
+import NoMatch from 'views/NoMatch'
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -17,7 +19,7 @@ import AppLayout from 'components/App/AppLayout'
 // making sure things like the back button and bookmarks
 // work properly.
 
-function App() {
+const App: React.FunctionComponent = () => {
   return (
     <Router>
       <Switch>
@@ -40,45 +42,6 @@ function App() {
         </Route>
       </Switch>
     </Router>
-  )
-}
-
-// You can think of these components as "pages"
-// in your app.
-
-function Tags() {
-  return (
-    <AppLayout>
-      <h2>标签</h2>
-    </AppLayout>
-  )
-}
-
-function Details() {
-  return (
-    <AppLayout>
-      <h2>明细</h2>
-    </AppLayout>
-  )
-}
-
-function Statistics() {
-  return (
-    <AppLayout>
-      <h2>统计</h2>
-    </AppLayout>
-  )
-}
-
-function NoMatch() {
-  const location = useLocation()
-
-  return (
-    <div>
-      <h3>
-        No match for <code>{location.pathname}</code>
-      </h3>
-    </div>
   )
 }
 
