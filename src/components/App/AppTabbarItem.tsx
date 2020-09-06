@@ -9,7 +9,7 @@ interface Props {
   routeName: string
 }
 
-const TabbarItemStyled = styled.nav`
+const TabbarItemStyled = styled.li`
   flex: 1;
 
   a {

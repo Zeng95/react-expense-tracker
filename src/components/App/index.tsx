@@ -6,8 +6,7 @@ import {
   Redirect,
   useLocation
 } from 'react-router-dom'
-import AppTabbar from 'components/App/AppTabbar'
-import styled from 'styled-components'
+import AppLayout from 'components/App/AppLayout'
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -18,44 +17,28 @@ import styled from 'styled-components'
 // making sure things like the back button and bookmarks
 // work properly.
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`
-
-const Main = styled.main`
-  flex: 1;
-`
-
 function App() {
   return (
     <Router>
-      <Container>
-        <Main>
-          <Switch>
-            <Redirect exact from="/" to="/details" />
+      <Switch>
+        <Redirect exact from="/" to="/details" />
 
-            <Route path="/tags">
-              <Tags />
-            </Route>
+        <Route path="/tags">
+          <Tags />
+        </Route>
 
-            <Route path="/details">
-              <Details />
-            </Route>
+        <Route path="/details">
+          <Details />
+        </Route>
 
-            <Route path="/statistics">
-              <Statistics />
-            </Route>
+        <Route path="/statistics">
+          <Statistics />
+        </Route>
 
-            <Route path="*">
-              <NoMatch />
-            </Route>
-          </Switch>
-        </Main>
-
-        <AppTabbar />
-      </Container>
+        <Route path="*">
+          <NoMatch />
+        </Route>
+      </Switch>
     </Router>
   )
 }
@@ -65,25 +48,25 @@ function App() {
 
 function Tags() {
   return (
-    <div>
+    <AppLayout>
       <h2>标签</h2>
-    </div>
+    </AppLayout>
   )
 }
 
 function Details() {
   return (
-    <div>
+    <AppLayout>
       <h2>明细</h2>
-    </div>
+    </AppLayout>
   )
 }
 
 function Statistics() {
   return (
-    <div>
+    <AppLayout>
       <h2>统计</h2>
-    </div>
+    </AppLayout>
   )
 }
 
