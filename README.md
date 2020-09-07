@@ -1,7 +1,7 @@
 # react-expense-tracker
 an Expense Tracker mobile web app using React Hooks and the context API.
 
-## 项目主要技术
+## 主要技术（Tech）
 ### 前端开发（Frontend）
 * React + React Router + React Hooks + React Context
 
