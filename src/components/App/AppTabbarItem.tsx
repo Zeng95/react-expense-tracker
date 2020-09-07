@@ -1,6 +1,6 @@
 import { FileText, PieChart, Tag } from '@styled-icons/feather'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 interface Props {
@@ -44,10 +44,10 @@ const TabbarItem: React.FunctionComponent<Props> = (props) => {
 
   return (
     <TabbarItemStyled>
-      <Link to={routePath}>
+      <NavLink to={routePath} activeClassName="selected">
         {getIcon(icon)}
         <span>{routeName}</span>
-      </Link>
+      </NavLink>
     </TabbarItemStyled>
   )
 }

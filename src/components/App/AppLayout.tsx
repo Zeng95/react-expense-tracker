@@ -1,26 +1,37 @@
 import React from 'react'
 import styled from 'styled-components'
 import AppTabbar from './AppTabbar'
+import { themes, fontSize3 } from 'components/Shared/Styles'
 
 interface Props {
   children: any
 }
 
-const Container = styled.div`
+const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
 `
-const Main = styled.main`
-  flex: 1;
+const AppHeader = styled.header`
+  ${fontSize3}
+  background-color: ${themes.color};
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+`
+const AppMain = styled.div`
+  flex: auto;
 `
 
-const AppLayout: React.FunctionComponent<Props> = (props) => {
+const AppLayout: React.FunctionComponent<Props> = ({ children }) => {
   return (
-    <Container>
-      <Main>{props.children}</Main>
+    <AppContainer>
+      <AppHeader>
+        <h1>旺财记账</h1>
+      </AppHeader>
+      <AppMain>{children}</AppMain>
       <AppTabbar />
-    </Container>
+    </AppContainer>
   )
 }
 

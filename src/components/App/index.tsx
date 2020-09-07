@@ -9,6 +9,7 @@ import Tags from 'views/Tags'
 import Details from 'views/Details'
 import Statistics from 'views/Statistics'
 import NoMatch from 'views/NoMatch'
+import { PopupProvider } from 'context/PopupContext'
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -30,7 +31,9 @@ const App: React.FunctionComponent = () => {
         </Route>
 
         <Route path="/details">
-          <Details />
+          <PopupProvider>
+            <Details />
+          </PopupProvider>
         </Route>
 
         <Route path="/statistics">
