@@ -1,7 +1,7 @@
+import { fontSize3, themes } from 'components/Shared/Styles'
 import React from 'react'
 import styled from 'styled-components'
 import AppTabbar from './AppTabbar'
-import { themes, fontSize3 } from 'components/Shared/Styles'
 
 interface Props {
   children: any
