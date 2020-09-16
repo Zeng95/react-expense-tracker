@@ -29,7 +29,9 @@ const AppLayout: React.FunctionComponent<Props> = ({ children }) => {
       <AppHeader>
         <h1>旺财记账</h1>
       </AppHeader>
+
       <AppMain>{children}</AppMain>
+
       <AppTabbar />
     </AppContainer>
   )

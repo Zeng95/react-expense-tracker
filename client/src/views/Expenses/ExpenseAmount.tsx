@@ -1,8 +1,7 @@
-import AppLayout from 'components/App/AppLayout'
 import React from 'react'
 import styled from 'styled-components'
-import AddButton from './AddButton'
 
+const ExpenseAmountStyled = styled.div``
 const DetailsHeader = styled.header``
 const DetailsContent = styled.main``
 const TypeSection = styled.section``
@@ -10,11 +9,9 @@ const CategorySection = styled.section``
 const NoteSection = styled.section``
 const NumberKeyboardSection = styled.section``
 
-const Details: React.FunctionComponent = () => {
+const ExpenseAmount = () => {
   return (
-    <AppLayout>
-      <AddButton />
-
+    <ExpenseAmountStyled>
       <DetailsHeader></DetailsHeader>
 
       <DetailsContent>
@@ -36,8 +33,8 @@ const Details: React.FunctionComponent = () => {
         </NoteSection>
         <NumberKeyboardSection>NumberKeyboard</NumberKeyboardSection>
       </DetailsContent>
-    </AppLayout>
+    </ExpenseAmountStyled>
   )
 }
 
-export default Details
+export default ExpenseAmount

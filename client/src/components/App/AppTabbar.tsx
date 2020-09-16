@@ -16,7 +16,11 @@ const AppTabbar: React.FunctionComponent = () => {
       <ul>
         <AppTabbarItem icon="tag" routePath="/tags" routeName="标签" />
 
-        <AppTabbarItem icon="file-text" routePath="/details" routeName="明细" />
+        <AppTabbarItem
+          icon="file-text"
+          routePath="/expenses"
+          routeName="明细"
+        />
 
         <AppTabbarItem
           icon="pie-chart"

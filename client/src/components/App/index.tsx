@@ -6,7 +6,7 @@ import {
   Redirect
 } from 'react-router-dom'
 import Tags from 'views/Tags'
-import Details from 'views/Details'
+import Expenses from 'views/Expenses'
 import Statistics from 'views/Statistics'
 import NoMatch from 'views/NoMatch'
 import { PopupProvider } from 'context/PopupContext'
@@ -24,15 +24,15 @@ const App: React.FunctionComponent = () => {
   return (
     <Router>
       <Switch>
-        <Redirect exact from="/" to="/details" />
+        <Redirect exact from="/" to="/expenses" />
 
         <Route path="/tags">
           <Tags />
         </Route>
 
-        <Route path="/details">
+        <Route path="/expenses">
           <PopupProvider>
-            <Details />
+            <Expenses />
           </PopupProvider>
         </Route>
 

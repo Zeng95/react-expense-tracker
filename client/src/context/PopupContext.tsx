@@ -8,6 +8,7 @@ type Props = {
 type PopupContextType = {
   popup: boolean
   showPopup: () => void
+  hidePopup: () => void
 }
 
 const PopupContext = createContext({} as PopupContextType)

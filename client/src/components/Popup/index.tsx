@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { PopupContext } from 'context/PopupContext'
 
 interface Props {
   children: any
@@ -24,14 +25,25 @@ const PopupStyled = styled.div`
   position: fixed;
   right: 0;
   width: 100%;
+  z-index: 1000;
 `
 
 const Popup: React.FunctionComponent<Props> = (props) => {
   return (
-    <PopupContainer>
-      <PopupMask></PopupMask>
-      <PopupStyled>{props.children}</PopupStyled>
-    </PopupContainer>
+    <PopupContext.Consumer>
+      {({ popup, hidePopup }) => {
+        if (!popup) {
+          return null
+        }
+
+        return (
+          <PopupContainer>
+            <PopupMask onClick={hidePopup} />
+            <PopupStyled>{props.children}</PopupStyled>
+          </PopupContainer>
+        )
+      }}
+    </PopupContext.Consumer>
   )
 }
 
