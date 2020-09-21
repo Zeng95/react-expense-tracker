@@ -2,6 +2,7 @@ import { FileText, PieChart, Tag } from '@styled-icons/feather'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 
 interface Props {
   icon: string
@@ -9,14 +10,12 @@ interface Props {
   routeName: string
 }
 
-const TabbarItemStyled = styled.li`
-  flex: 1;
-
+const TabbarItemStyled = styled.li.attrs({
+  className: 'flex-1'
+})`
   a {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 7px;
+    ${tw`flex items-center flex-col`}
+    padding: 4px;
 
     .icon {
       height: 24px;
@@ -29,7 +28,7 @@ const TabbarItemStyled = styled.li`
   }
 `
 
-const TabbarItem: React.FunctionComponent<Props> = (props) => {
+const TabbarItem: React.FunctionComponent<Props> = props => {
   function getIcon(icon: String) {
     if (icon === 'tag') {
       return <Tag className="icon icon-tag" />

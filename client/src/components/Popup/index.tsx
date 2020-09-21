@@ -7,28 +7,19 @@ interface Props {
 }
 
 const PopupContainer = styled.div``
-const PopupMask = styled.div`
+const PopupMask = styled.div.attrs({
+  className: 'fixed inset-0 w-full h-full'
+})`
   background-color: rgba(0, 0, 0, 0.4);
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
   z-index: 999;
 `
-const PopupStyled = styled.div`
-  background-color: #fff;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  width: 100%;
+const PopupStyled = styled.div.attrs({
+  className: 'fixed right-0 bottom-0 left-0 w-full bg-white'
+})`
   z-index: 1000;
 `
 
-const Popup: React.FunctionComponent<Props> = (props) => {
+const Popup: React.FunctionComponent<Props> = props => {
   return (
     <PopupContext.Consumer>
       {({ popup, hidePopup }) => {

@@ -4,15 +4,18 @@ import { PopupContext } from 'context/PopupContext'
 import React from 'react'
 import styled from 'styled-components'
 
-const AddButtonStyled = styled.button`
-  background-color: #fff;
+const AddButtonStyled = styled.button.attrs({
+  className: 'fixed rounded-full bg-white'
+})`
   border: 0;
-  border-radius: 50%;
   bottom: 100px;
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.16);
   padding: 12px;
-  position: fixed;
   right: 26px;
+
+  &:focus {
+    outline: none;
+  }
 `
 const GreenEdit = styled(Edit)`
   color: ${themes.color};

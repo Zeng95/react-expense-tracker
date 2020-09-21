@@ -7,21 +7,19 @@ interface Props {
   children: any
 }
 
-const AppContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-`
-const AppHeader = styled.header`
+const AppContainer = styled.div.attrs({
+  className: 'flex flex-col h-screen'
+})``
+const AppHeader = styled.header.attrs({
+  className: 'text-white text-center'
+})`
   ${fontSize3}
   background-color: ${themes.color};
-  color: #fff;
   padding: 10px 0;
-  text-align: center;
 `
-const AppMain = styled.div`
-  flex: auto;
-`
+const AppMain = styled.div.attrs({
+  className: 'flex-auto'
+})``
 
 const AppLayout: React.FunctionComponent<Props> = ({ children }) => {
   return (
