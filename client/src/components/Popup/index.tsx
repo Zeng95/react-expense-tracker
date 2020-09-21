@@ -1,6 +1,6 @@
+import { PopupContext } from 'context/PopupContext'
 import React from 'react'
 import styled from 'styled-components'
-import { PopupContext } from 'context/PopupContext'
 
 interface Props {
   children: any

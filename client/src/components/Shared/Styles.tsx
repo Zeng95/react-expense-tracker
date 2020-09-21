@@ -1,5 +1,5 @@
 export const themes = {
-  color: '#44B376'
+  color: '#41B475'
 }
 
 export const fontSizeBig = 'font-size: 2em;'

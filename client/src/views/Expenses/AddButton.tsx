@@ -5,7 +5,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const AddButtonStyled = styled.button.attrs({
-  className: 'fixed rounded-full bg-white'
+  className: 'fixed rounded-full bg-white leading-none'
 })`
   border: 0;
   bottom: 100px;
@@ -26,13 +26,11 @@ const GreenEdit = styled(Edit)`
 const AddButton: React.FunctionComponent = () => {
   return (
     <PopupContext.Consumer>
-      {({ showPopup }) => {
-        return (
-          <AddButtonStyled onClick={showPopup}>
-            <GreenEdit />
-          </AddButtonStyled>
-        )
-      }}
+      {({ showPopup }) => (
+        <AddButtonStyled onClick={showPopup}>
+          <GreenEdit />
+        </AddButtonStyled>
+      )}
     </PopupContext.Consumer>
   )
 }

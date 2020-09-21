@@ -1,4 +1,5 @@
 import { FileText, PieChart, Tag } from '@styled-icons/feather'
+import { themes } from 'components/Shared/Styles'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
@@ -23,6 +24,17 @@ const TabbarItemStyled = styled.li.attrs({
 
       &-tag {
         transform: rotate(90deg);
+      }
+    }
+
+    &.selected {
+      .icon {
+        color: white;
+        fill: ${themes.color};
+      }
+
+      span {
+        color: ${themes.color};
       }
     }
   }
