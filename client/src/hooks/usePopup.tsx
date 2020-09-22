@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const usePopup = () => {
-  const [popup, setPopup] = useState(false)
+  const [popup, setPopup] = useState(true)
 
   const showPopup = () => {
     setPopup(true)

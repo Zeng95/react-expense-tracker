@@ -1444,6 +1444,14 @@
     "@babel/runtime" "^7.10.5"
     "@styled-icons/styled-icon" "^10.6.0"
 
+"@styled-icons/ionicons-solid@^10.18.0":
+  version "10.18.0"
+  resolved "https://registry.npm.taobao.org/@styled-icons/ionicons-solid/download/@styled-icons/ionicons-solid-10.18.0.tgz#3794f4c70b7e8515ea105f45b6c25e7c67f2fd56"
+  integrity sha1-N5T0xwt+hRXqEF9FtsJefGfy/VY=
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    "@styled-icons/styled-icon" "^10.6.0"
+
 "@styled-icons/styled-icon@^10.6.0":
   version "10.6.3"
   resolved "https://registry.npm.taobao.org/@styled-icons/styled-icon/download/@styled-icons/styled-icon-10.6.3.tgz#eae0e5e18fd601ac47e821bb9c2e099810e86403"

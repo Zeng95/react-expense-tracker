@@ -18,7 +18,7 @@ const AppHeader = styled.header.attrs({
   padding: 10px 0;
 `
 const AppMain = styled.div.attrs({
-  className: 'flex-auto'
+  className: 'flex-grow'
 })``
 
 const AppLayout: React.FunctionComponent<Props> = ({ children }) => {
